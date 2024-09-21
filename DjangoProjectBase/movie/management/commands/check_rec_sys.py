@@ -37,7 +37,6 @@ class Command(BaseCommand):
             emb = list(np.frombuffer(emb))
             sim.append(cosine_similarity(emb,emb_req))
         sim = np.array(sim)
-        print(sim)
         idx = np.argmax(sim)
         idx = int(idx)
         print(items[idx].title)
